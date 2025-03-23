@@ -4,61 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Services</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <!-- Bootstrap JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .service-card {
+        background: white;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .footer-bg {
+        background-color: pink;
+        padding: 40px 0;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        flex: 1; /* Pushes the footer down */
+      }
+
+      .footer-bg {
+        background-color: pink;
+        padding: 40px 0;
+      }
+    </style>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
-        <div class="logo">Bloom</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: pink">
+        <div class="container-fluid">
+          <a class="navbar-brand text-black fw-bold" href="index.html">Bloom</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link text-black fw-bold" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black fw-bold" href="about.html"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black fw-bold" href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black fw-bold" href="contact.html"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <div class="container">
-      <div class="service-card">
-        <h2>Web Development</h2>
-        <p>We build scalable and modern websites.</p>
-      </div>
-      <div class="service-card">
-        <h2>UI/UX Design</h2>
-        <p>Designing intuitive and user-friendly interfaces.</p>
-      </div>
-      <div class="service-card">
-        <h2>SEO Optimization</h2>
-        <p>Improving search rankings and visibility.</p>
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="service-card text-center">
+            <h3>Web Development</h3>
+            <p>We build scalable and modern websites.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card text-center">
+            <h3>UI/UX Design</h3>
+            <p>Designing intuitive and user-friendly interfaces.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-card text-center">
+            <h3>SEO Optimization</h3>
+            <p>Improving search rankings and visibility.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="about">
-          <h3>About Us</h3>
-          <p>We create innovative and responsive web applications.</p>
+    <footer class="footer-bg text-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>About Us</h5>
+            <p>We create innovative and responsive web applications.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-black fw-bold">Home</a></li>
+              <li>
+                <a href="services.html" class="text-black fw-bold">Services</a>
+              </li>
+              <li>
+                <a href="contact.html" class="text-black fw-bold">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 text-md-end text-center">
+            <h5>Follow Us</h5>
+            <a href="#" class="text-black fw-bold me-2">Facebook</a>
+            <a href="#" class="text-black fw-bold me-2">Twitter</a>
+            <a href="#" class="text-black fw-bold">Instagram</a>
+          </div>
         </div>
-        <div class="quick-links">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="social-links">
-          <h3>Follow Us</h3>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
+        <hr />
+        <p class="text-center fw-bold">
+          &copy; 2024 Operario Bloom. All Rights Reserved.
+        </p>
       </div>
-      <p>&copy; 2024 MyWebsite. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
